@@ -1,0 +1,28 @@
+{% extends 'front.html.twig' %}
+
+{% block title %}Hello ProjectController!{% endblock %}
+
+{% block content %}
+
+    <main role="main" class="container">
+        <div class="row">
+            {% if app.user %}
+            <div class="col-12">
+                    {{ form_start(form) }}
+                    {{ form_errors(form) }}
+                    {{ form_row(form) }}
+                    <button class="btn btn-primary">Proposer un projet</button>
+                    {{ form_end(form) }}
+            </div>
+            {% else %}
+            <div class="col-8 offset-2 text-center">
+                <h4>Vous devez être identifié(e) pour proposer un projet</h4>
+                <a class="btn btn-dark" href="{{ path('app_login') }}">Se connecter</a>
+                <a class="btn btn-primary" href="{{ path('app_login') }}">Créer un compte</a>
+                <img src="{{ asset('img/padawan.jpg')}}" class="img-fluid" alt="">
+            </div>
+            {% endif %}
+        </div>
+    </main>
+
+{% endblock content %}

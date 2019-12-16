@@ -1,0 +1,19 @@
+{% extends 'front.html.twig' %}
+{% block title %} {{ parent() }} Bienvenue {% endblock title %}
+
+{% block content  %}
+<main role="main" class="container">
+    <div class="starter-template">
+        <div class="row">
+            <h1>Salut {{ prenom }}</h1>
+            <div class="col-sm-12">
+                <img src="img/padawan.jpg" width="50%" alt="">
+                <p class="lead">Apprenez à coder avec des vrais projets.</p>
+                <a class="btn btn-dark" href="">Devenir un Padawan</a>
+                <a class="btn btn-outline-dark" href="">Déposer un projet</a>
+            </div>
+
+        </div>
+    </div>
+</main><!-- /.container -->
+{% endblock %}
